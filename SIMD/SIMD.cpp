@@ -566,7 +566,7 @@ public:
 
 int main()
 {
-	/*cout << "common algorithm:" << endl << endl;
+	cout << "common algorithm:" << endl << endl;
 	for (int i = 256; i <= 2048; i += 256)
 	{
 		MatMultCommon* s = new MatMultCommon(i, 1.0);
@@ -609,7 +609,7 @@ int main()
 		s->matMultTh();
 		delete s;
 	}
-	cout << endl;*/
+	cout << endl;
 	
 	cout << "common algorithm:" << endl << endl;
 	for (int i = 5e7; i <= 3e8; i += 5e7)
@@ -620,7 +620,7 @@ int main()
 	}
 
 	cout << "multi-threads:" << endl << endl;
-	for (int i = 5e7; i <= 3e8; i += 5e7)
+	for (int i = 5e7; i <= 2e8; i += 5e7)
 	{
 		VecAddThreads* s = new VecAddThreads(i, 1.0);
 		s->vecAddTh();
@@ -628,7 +628,7 @@ int main()
 	}
 
 	cout << "SIMD:" << endl << endl;
-	for (int i = 5e7; i <= 3e8; i += 5e7)
+	for (int i = 5e7; i <= 2e8; i += 5e7)
 	{
 		VecAddSIMD* s = new VecAddSIMD(i, 1.0);
 		s->vecAdd();
@@ -636,7 +636,7 @@ int main()
 	}
 
 	cout << "Best:" << endl << endl;
-	for (int i = 5e7; i <= 3e8; i += 5e7)
+	for (int i = 5e7; i <= 2e8; i += 5e7)
 	{
 		VecAddBest* s = new VecAddBest(i, 1.0);
 		s->vecAddTh();
